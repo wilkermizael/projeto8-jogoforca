@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    width: 1500px;
+    height: 850px;
+    /*background-color: dodgerblue;*/
+
+    margin: 40px auto;
+}
+.topo{
+    display: flex;
+    justify-content: space-between;
+}
+.forca{
+    width: 550px;
+    height: 500px;
+    /*background-color: aqua;*/
+}
+.forca img{
+    width: 400px;
+    height: 460px;
+}
+.asside-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 900px;
+    height:460px;
+    /*background-color:teal;*/
+    padding: 20px;
+
+}
+
+.btn-escolha{
+    width: 100%;
+    height: 90px;
+    /*background-color: red;*/
+    position: relative;
+}
+
+.btn-escolha button{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(19, 206, 25);
+    color: white;
+    font-size: 14pt;
+    border-radius:5px ;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}  
+.campo-palavra{
+    width: 100%;
+    height: 200px;
+    /*background-color: brown;*/
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.escolha-letras{
+    width: 900px;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 50px auto;
+}
+.linha{
+    width: 50px;
+    height: 0px;
+    border: 3px solid black;
+    
+}
