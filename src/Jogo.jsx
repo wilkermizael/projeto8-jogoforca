@@ -1,8 +1,7 @@
 
-import { useState } from "react";
 import imagem0 from "./assets/forca0.png"; 
 export default function Jogo(props){
-let [minhapalavra, setminhapalavra] = useState("");
+
 
 
 function escolherPalavra(arrayLista,){
@@ -10,7 +9,7 @@ function escolherPalavra(arrayLista,){
         let novaArrayLista = [...arrayLista]; 
         novaArrayLista.sort( item => Math.random(item) - 0.5)
         
-        setminhapalavra(novaArrayLista[1])
+        props.setminhapalavra(novaArrayLista[1])
         //let numeroDeLetras = novaArrayLista[1].length;
 
 }
@@ -27,15 +26,13 @@ function escolherPalavra(arrayLista,){
                     </div>
                     <div className="campo-palavra">
                         
-                        <CampoPalavras tamanho={minhapalavra} />
+                        <CampoPalavras tamanho={props.minhapalavra} />
                        
                     </div>
 
                 </div>
             </div>
-                <div className="escolha-letras">
-                    
-                </div>
+               
         </div>
     )
 

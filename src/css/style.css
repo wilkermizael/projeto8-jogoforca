@@ -60,14 +60,34 @@
 }
 
 .escolha-letras{
-    width: 900px;
+    width: 800px;
     height: 200px;
     background-color: aliceblue;
     margin: 50px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 .linha{
     width: 50px;
     height: 0px;
     border: 3px solid black;
     
+}
+.alfabeto {
+    width: 40px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    background-color: #798A9F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    border-radius: 2px;
+    margin: 10px;
 }
