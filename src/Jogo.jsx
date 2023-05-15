@@ -35,11 +35,11 @@ function escolherPalavra(arrayLista){
             
             <div className="topo">    
                 <div className="forca">
-                    <img data-teste="game-image" src={minhaimagem[props.contErro]} alt=""/>
+                    <img data-test="game-image" src={minhaimagem[props.contErro]} alt=""/>
                 </div>
                 <div className="asside-right">
                     <div className="btn-escolha">
-                        <button data-teste="choose-word" onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
+                        <button data-test="choose-word" onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
                     </div>
                     <div className="campo-palavra">
                         <div className="underline">
