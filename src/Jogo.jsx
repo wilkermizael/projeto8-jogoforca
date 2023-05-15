@@ -13,7 +13,7 @@ export default function Jogo(props){
 
 function escolherPalavra(arrayLista){
     // Salvando o array em nova variavel de maneira aleatória
-        
+        props.setcorAlfabeto('cor-letraEnable')
         let novaArrayLista = [...arrayLista]; 
         props.setcor('')
         props.setcontErro(0)

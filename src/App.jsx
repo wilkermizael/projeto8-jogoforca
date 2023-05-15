@@ -16,6 +16,7 @@ export default function App (){
     let [underline, setUnderline] = useState('');
     let [contErro, setcontErro] = useState(0);
     let [cor,setcor]=useState('')
+    let [corAlfabeto, setcorAlfabeto]=useState('cor-letraDisabled')
 
     
     
@@ -43,6 +44,7 @@ export default function App (){
             setcontErro={setcontErro}
             cor={cor}
             setcor={setcor}
+            setcorAlfabeto={setcorAlfabeto}
             
             
             />
@@ -64,6 +66,8 @@ export default function App (){
                     contErro={contErro}
                     setcontErro={setcontErro}
                     setcor={setcor}
+                    corAlfabeto={corAlfabeto}
+                    setcorAlfabeto={setcorAlfabeto}
                     />
                     
                     
