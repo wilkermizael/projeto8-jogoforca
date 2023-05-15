@@ -1,4 +1,4 @@
-import palavras from "./palavra"
+import palavras from "./palavras"
 import { useState } from "react";
 import Jogo from "./Jogo"
 import Letras from "./Letras"
@@ -22,7 +22,8 @@ export default function App (){
     return(
     
         <div className="container">
-            <Jogo array={palavras} 
+            <Jogo 
+            array={palavras} 
             minhapalavra={minhapalavra} 
             setminhapalavra={setminhapalavra} 
             setHabilitar={setHabilitar} 
