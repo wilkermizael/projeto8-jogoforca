@@ -42,8 +42,8 @@ function escolherPalavra(arrayLista){
                         <button data-teste="choose-word" onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
                     </div>
                     <div className="campo-palavra">
-                        <div className="underline">
-                            <p data-test="word" className={`underline ${props.cor}`}>{props.underline}</p>
+                        <div data-test="word" className="underline">
+                            <p  className={`underline ${props.cor}`}>{props.underline}</p>
                 
                         </div>
                     </div>

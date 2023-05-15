@@ -38,10 +38,6 @@ export default function Letras(props){
         console.log(erroLetra)
         
         console.log(props.minhapalavra)
-
-        const arrayMeuAlfabeto = [ 
-            
-        ]
 }
     
     return(
