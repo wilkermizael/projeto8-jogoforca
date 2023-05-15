@@ -35,15 +35,15 @@ function escolherPalavra(arrayLista){
             
             <div className="topo">    
                 <div className="forca">
-                    <img src={minhaimagem[props.contErro]} alt=""/>
+                    <img data-teste="game-image" src={minhaimagem[props.contErro]} alt=""/>
                 </div>
                 <div className="asside-right">
                     <div className="btn-escolha">
-                        <button onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
+                        <button data-teste="choose-word" onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
                     </div>
                     <div className="campo-palavra">
                         <div className="underline">
-                            <p className={`underline ${props.cor}`}>{props.underline}</p>
+                            <p data-test="word" className={`underline ${props.cor}`}>{props.underline}</p>
                         </div>
                     </div>
 
@@ -55,43 +55,3 @@ function escolherPalavra(arrayLista){
 
     
 }
-/*<CampoPalavras tamanho={props.minhapalavra}  
-                        linha={props.classeUnderline} 
-                        setCampoUnderline={props.setCampoUnderline} 
-                        campoUnderline={props.campoUnderline}
-                        posicao={props.posicao}
-                        conteudo={props.conteudo}
-                        mudaLetra={props.mudaLetra}
-                        setMudaLetra={props.setMudaLetra}
-                        setminhapalavra={props.setminhapalavra}
-                        />*/
-/*function CampoPalavras(props){
-    //console.log( props.tamanho)
-    let array = [];
-    let underline = [];
-    for (let i=0; i < props.tamanho.length; i++){
-        array.push(i);
-    }
-   let posicao = props.posicao
-   //console.log(posicao)
-    //Limpar a palavra
-    
-
-   underline=[
-        <>
-        {array.map((item) => <div key={item} className={props.linha}>{props.conteudo}</div>)}
-        </>
-        ]
-        for(let i = 0; i< posicao.length; i++){
-            
-            console.log(underline[0].props.children[posicao[i]].props.children[0])
-        }
-    
-    
-    return(
-        <>
-        {underline}
-        </>
-    )
-  
-}*/
