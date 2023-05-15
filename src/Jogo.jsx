@@ -1,5 +1,4 @@
 
-//import { useState } from "react";
 import imagem0 from "./assets/forca0.png";
 import imagem1 from "./assets/forca1.png";
 import imagem2 from "./assets/forca2.png";
@@ -42,8 +41,8 @@ function escolherPalavra(arrayLista){
                         <button data-test="choose-word" onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
                     </div>
                     <div className="campo-palavra">
-                        <div className="underline">
-                            <p  data-test="word" className={`underline ${props.cor}`}>{props.underline}</p>
+                        <div data-test="word" className="underline">
+                            <p className={`underline ${props.cor}`}>{props.underline}</p>
                 
                         </div>
                     </div>
