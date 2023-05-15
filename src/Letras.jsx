@@ -1,70 +1,45 @@
-import { useState } from "react"
-
 
 export default function Letras(props){
-    let [liberar, setLiberar] = useState(true)
-    let [incluir, setIncluir] = useState("")
-    let letraClicada='';
-    let palavraAnalisada =[]
-    //const arrayEscolhas = [];
-    let objetoDeButtons=[];
-   
-    
-    function renderirarNaTela(palavraAnalisada, letraClicada){
-        let minhaposicao = [];
-        if(palavraAnalisada.includes(letraClicada[0])){
-            for(let j = 0; j< palavraAnalisada.length ; j++){
-            
-                if(palavraAnalisada[j].includes(letraClicada[0])){
-                    minhaposicao.push(j)
-                    props.setPosicao(minhaposicao);
-                    console.log(minhaposicao)
-    
-                    props.setConteudo(letraClicada)
-                    
-                }
-            }
-        }
-    }
-    
-    function clickLetra(i, props){
-    
-        
-        let novaArrayButton = [...objetoDeButtons]
-        //let minhaposicao = [];
 
-        letraClicada= [novaArrayButton[0].props.children[i].props.children];
-        letraClicada.toString('')
-        props.setLetraClicada(letraClicada)
-        palavraAnalisada= [...props.minhapalavra]
+    
+    function clickLetra(item){
+    
         
+        
+        let arrayClicado = [...props.letraClicada,item]
+        props.setLetraClicada(arrayClicado)
+        const underline = props.minhapalavra.map((letra)=>{
+            return( arrayClicado.includes(letra) ? letra : ' _' )
+        })
+        props.setUnderline(underline)
+        let erroLetra = props.contErro
+        if(!props.minhapalavra.includes(item)){
+            erroLetra++
+        }
+        if(erroLetra === 6){
+            props.setHabilitar(true)
+            props.setUnderline(props.minhapalavra)
+            props.setcor('vermelho')
+        }
+        if(props.minhapalavra.toString() === underline.toString()){
+            props.setHabilitar(true)
+            props.setcor('verde')
+        }
+         
+        props.setcontErro(erroLetra);
+        console.log(erroLetra)
         
         console.log(props.minhapalavra)
-        console.log(letraClicada)
-        
-        renderirarNaTela(palavraAnalisada,letraClicada)
-    
 }
-
-    objetoDeButtons =[
-        <>
-    {props.alfabeto.map((item,index)=> 
-        
-    <button key={index} className='alfabeto' disabled={liberar={liberar} ? props.habilitar :{incluir}} onClick={()=>clickLetra(index,props)}>{item}</button>)}
-        </>
-    ]
     
     return(
         <>
         
-        {objetoDeButtons}
+        {props.alfabeto.map((item)=> 
+        
+        <button key={item} className='alfabeto' disabled={props.habilitar ? true : props.letraClicada.includes(item) ? true : false } onClick={()=>clickLetra(item)}>{item.toUpperCase()}</button>)}
         
         </>
         
     )
 }
-
-
-
-//disabled={props.habilitar ? "disabled" : ""}
-//onClick={()=>clickLetra(index, props)}

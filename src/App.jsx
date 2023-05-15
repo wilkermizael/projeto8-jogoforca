@@ -7,12 +7,18 @@ export default function App (){
     let [minhapalavra, setminhapalavra] = useState("");
     let [minhaletra, setMinhaLetra] = useState('')
     const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    const [habilitar, setHabilitar] = useState("disabled")
+    const [habilitar, setHabilitar] = useState(true)
     let [classeUnderline, setClasseUnderline] = useState("linha")
     let [posicao, setPosicao] = useState([]);
-    let [letraClicada, setLetraClicada] = useState('')
+    let [letraClicada, setLetraClicada] = useState([])
     let [conteudo, setConteudo] = useState('')
     let [contadorImg, setContadorImg]=useState(0)
+    let [underline, setUnderline] = useState('');
+    let [contErro, setcontErro] = useState(0);
+    let [cor,setcor]=useState('')
+
+    
+    
     return(
     
         <div className="container">
@@ -29,7 +35,13 @@ export default function App (){
             conteudo={conteudo}
             contadorImg={contadorImg}
             setContadorImg={setContadorImg}
-            
+            underline={underline}
+            setUnderline={setUnderline}
+            setLetraClicada={setLetraClicada}
+            contErro={contErro}
+            setcontErro={setcontErro}
+            cor={cor}
+            setcor={setcor}
             
             
             />
@@ -47,6 +59,10 @@ export default function App (){
                     letraClicada={letraClicada}
                     setLetraClicada={setLetraClicada}
                     setConteudo ={setConteudo}
+                    setUnderline={setUnderline}
+                    contErro={contErro}
+                    setcontErro={setcontErro}
+                    setcor={setcor}
                     />
                     
                     

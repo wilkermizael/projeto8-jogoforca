@@ -91,3 +91,21 @@
     border-radius: 2px;
     margin: 10px;
 }
+.vermelho{
+    color:red;
+    font-size:100px
+}
+
+
+.verde{
+    color: green;
+    font-size:100px
+}
+.underline{
+    font-size:100px
+}
+/*.campo-palavra .underline{
+    width: 400px;
+    height: 100px;
+    background-color: rebeccapurple;
+}*/

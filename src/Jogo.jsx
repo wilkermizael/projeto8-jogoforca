@@ -13,13 +13,21 @@ export default function Jogo(props){
 
 function escolherPalavra(arrayLista){
     // Salvando o array em nova variavel de maneira aleatória
+        
         let novaArrayLista = [...arrayLista]; 
+        props.setcor('')
+        props.setcontErro(0)
         novaArrayLista.sort( item => Math.random(item) - 0.5)
 
         let arrayCaractere= novaArrayLista[1].split('');
         props.setminhapalavra(arrayCaractere);
         props.setHabilitar(""); 
-        
+        const arrayClicadaReset =[]
+        props.setLetraClicada(arrayClicadaReset)
+        const underline =arrayCaractere.map(()=>{
+            return(' _')
+        })
+        props.setUnderline(underline)
         
 }
     return (
@@ -27,26 +35,16 @@ function escolherPalavra(arrayLista){
             
             <div className="topo">    
                 <div className="forca">
-                    <img src={minhaimagem[0]} alt=""/>
+                    <img src={minhaimagem[props.contErro]} alt=""/>
                 </div>
                 <div className="asside-right">
                     <div className="btn-escolha">
                         <button onClick={() => escolherPalavra(props.array)}>Escolher Palavra</button>
                     </div>
                     <div className="campo-palavra">
-                        
-                        <CampoPalavras tamanho={props.minhapalavra}  
-                        linha={props.classeUnderline} 
-                        setCampoUnderline={props.setCampoUnderline} 
-                        campoUnderline={props.campoUnderline}
-                        posicao={props.posicao}
-                        conteudo={props.conteudo}
-                        mudaLetra={props.mudaLetra}
-                        setMudaLetra={props.setMudaLetra}
-                        setminhapalavra={props.setminhapalavra}
-                        />
-                        
-                       
+                        <div className="underline">
+                            <p className={`underline ${props.cor}`}>{props.underline}</p>
+                        </div>
                     </div>
 
                 </div>
@@ -57,8 +55,17 @@ function escolherPalavra(arrayLista){
 
     
 }
-
-function CampoPalavras(props){
+/*<CampoPalavras tamanho={props.minhapalavra}  
+                        linha={props.classeUnderline} 
+                        setCampoUnderline={props.setCampoUnderline} 
+                        campoUnderline={props.campoUnderline}
+                        posicao={props.posicao}
+                        conteudo={props.conteudo}
+                        mudaLetra={props.mudaLetra}
+                        setMudaLetra={props.setMudaLetra}
+                        setminhapalavra={props.setminhapalavra}
+                        />*/
+/*function CampoPalavras(props){
     //console.log( props.tamanho)
     let array = [];
     let underline = [];
@@ -87,4 +94,4 @@ function CampoPalavras(props){
         </>
     )
   
-}
+}*/
