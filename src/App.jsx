@@ -18,6 +18,7 @@ export default function App (){
     let [cor,setcor]=useState('')
     let [corAlfabeto, setcorAlfabeto]=useState('cor-letraDisabled')
 
+
     
     
     return(
@@ -45,6 +46,8 @@ export default function App (){
             cor={cor}
             setcor={setcor}
             setcorAlfabeto={setcorAlfabeto}
+            
+            
             
             
             />

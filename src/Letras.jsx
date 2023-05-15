@@ -13,6 +13,7 @@ export default function Letras(props){
             setcorAlfabeto('cor-letraEnable')
             alert('alerta')
         }*/
+       
         const underline = props.minhapalavra.map((letra)=>{
             return( arrayClicado.includes(letra) ? letra : ' _' )
         })
@@ -20,7 +21,7 @@ export default function Letras(props){
         let erroLetra = props.contErro
         if(!props.minhapalavra.includes(item)){
             erroLetra++
-            props.setcorAlfabeto('cor-letraDisabled')
+            //props.setcorAlfabeto('cor-letraDisabled')
         }
         if(erroLetra === 6){
             props.setHabilitar(true)
@@ -37,6 +38,10 @@ export default function Letras(props){
         console.log(erroLetra)
         
         console.log(props.minhapalavra)
+
+        const arrayMeuAlfabeto = [ 
+            
+        ]
 }
     
     return(

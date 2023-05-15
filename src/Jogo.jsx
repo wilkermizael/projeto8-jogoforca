@@ -44,6 +44,7 @@ function escolherPalavra(arrayLista){
                     <div className="campo-palavra">
                         <div className="underline">
                             <p data-test="word" className={`underline ${props.cor}`}>{props.underline}</p>
+                
                         </div>
                     </div>
 
